@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 18px;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Text Area */
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    resize: vertical;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #6366f1;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.clear {
+    background: #64748b;
+}
+
+.stop {
+    background: #dc2626;
+}
+
+
+/* Speech Status */
+
+#speechStatus {
+    margin-top: 15px;
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+
+/* Analysis Cards */
+
+.analysis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card span {
+    font-size: 30px;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    margin: 10px 0 5px;
+}
+
+.stat-card p {
+    color: #64748b;
+}
+
+
+/* Result Rows */
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.result-row span {
+    color: #64748b;
+}
+
+
+/* Sentiment */
+
+.sentiment {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.sentiment h3 {
+    margin-bottom: 12px;
+}
+
+#sentimentResult {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .analysis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .analysis {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    textarea {
+        height: 150px;
+    }
+}
